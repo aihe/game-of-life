@@ -11,3 +11,35 @@ body
 	justify-content: center;
 	align-items: center;
 }
+
+.icon
+{
+	color: #A7A3AE;
+	margin-top: 1%;
+	position: absolute;
+	top: 0;
+	font-size: 40px;
+	transition-duration: 0.7s;
+}
+
+.github
+{
+	left: 0;
+	margin-left: 1%;
+}
+
+.github:hover
+{
+	color: #EEFFA8;
+}
+
+.help
+{
+	right: 0;
+	margin-right: 1%;
+}
+
+.help:hover
+{
+	color: #FFA8DE;
+}
