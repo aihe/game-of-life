@@ -1,11 +1,11 @@
 /*
 	CREATION GRILLE :
 
-	let arr = new Array(CANVAS_HEIGHT / 10);
+	let arr = new Array(CANVAS_HEIGHT / CELL_LENGTH);
 
 	for (let i = 0; i < arr.length; i++)
 	{
-		arr[i] = new Array(CANVAS_WIDTH / 10);
+		arr[i] = new Array(CANVAS_WIDTH / CELL_LENGTH);
 	}
 
 	INSTANCIATION VALEURS GRILLE :
@@ -14,11 +14,7 @@
 	{
 		for (let i = 0; i < arr[j].length; i++)
 		{
-			arr[j][i] = new Cell(i * 10, j * 10);
-			if (i % 2 == 0)
-			{
-				arr[j][i].is_alive = false;
-			}
+			arr[j][i] = new Cell(i * CELL_LENGTH, j * CELL_LENGTH);
 		}
 	}
 

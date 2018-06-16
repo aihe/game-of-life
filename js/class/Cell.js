@@ -10,7 +10,7 @@ class Cell
 {
 	/**
 	 * Creates a cell instance if the given parameters are valid.
-	 * The "is_alive" boolean field is by default on true.
+	 * The "is_alive" boolean field is by default on false.
 	 * @param		{number} x 
 	 * @param 		{number} y 
 	 */
@@ -26,7 +26,7 @@ class Cell
 			this.x = 0;
 			this.y = 0;
 		}
-		this.is_alive = true;
+		this.is_alive = false;
 	}
 
 	/**
