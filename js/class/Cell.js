@@ -58,13 +58,25 @@ class Cell
 	 * Makes the cell evolve according to its number of neighbours.
 	 * @param		{number} neighbors 
 	 */
-	evolve(neighbors)
+	next_state(neighbors)
 	{
+		let			changes;
+
+		changes = 0;
 		if (typeof(neighbors) === "number")
 		{
-			return (0);	
+			if ((neighbors === 3) && !(this.is_alive))
+			{
+				changes++;
+				this.is_alive = true;
+			}
+			else if (((neighbors < 2) || (neighbors > 3)) && (this.is_alive))
+			{
+				changes++;
+				this.is_alive = false;
+			}
 		}
-		return (1);
+		return (changes);
 	}
 
 	set x(x)
