@@ -27,6 +27,20 @@ class Grid
 	}
 
 	/**
+	 * Returns the cell's (x;y) neighbors.
+	 * @param		{number} x 
+	 * @param		{number} y
+	 * @returns		{number} neighbors
+	 */
+	get_neighbors(x, y)
+	{
+		let			neighbors;
+
+		neighbors = 0;
+		return (neighbors);
+	}
+
+	/**
 	 * Displays the grid on the Canvas.
 	 */
 	display()
@@ -47,11 +61,17 @@ class Grid
 	 */
 	update(mouse_x, mouse_y)
 	{
-		let y = Math.floor(mouse_y / 10);
-		let x = Math.floor(mouse_x / 10);
-		if ((x >= 0 && x < GRID_WIDTH) && (y >= 0 && y < GRID_HEIGHT))
+		let			x;
+		let			y;
+
+		if ((typeof(mouse_x) === "number") && (typeof(mouse_y) === "number"))
 		{
-			this.grid[y][x].is_alive = !(this.grid[y][x].is_alive);
+			x = Math.floor(mouse_x / 10);
+			y = Math.floor(mouse_y / 10);
+			if ((x >= 0 && x < GRID_WIDTH) && (y >= 0 && y < GRID_HEIGHT))
+			{
+				this.grid[y][x].is_alive = !(this.grid[y][x].is_alive);
+			}
 		}
 	}
 }

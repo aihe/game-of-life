@@ -54,6 +54,19 @@ class Cell
 		}
 	}
 
+	/**
+	 * Makes the cell evolve according to its number of neighbours.
+	 * @param		{number} neighbors 
+	 */
+	evolve(neighbors)
+	{
+		if (typeof(neighbors) === "number")
+		{
+			return (0);	
+		}
+		return (1);
+	}
+
 	set x(x)
 	{
 		if ((typeof(x) === "number") && (x >= 0 && x < CANVAS_WIDTH))
