@@ -17,8 +17,10 @@ The evolution of a given cell for the next generation is based on the same rules
 
 You just need to `git clone` the repo:
 
-	git clone https://github.com/aihe/game-of-life
-	cd game-of-life
+```bash
+git clone https://github.com/aihe/game-of-life
+cd game-of-life
+```
 
 Then open "index.html" with your favorite browser.
 
