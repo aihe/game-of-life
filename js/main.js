@@ -15,4 +15,5 @@ function	draw()
 	background(BACKGROUND_COLOR);
 	grid.display();
 	print_game_step();
+	keyTouched();
 }

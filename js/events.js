@@ -12,3 +12,11 @@ function	keyReleased()
 	}
 	return (false);
 }
+
+function	keyTouched()
+{
+	if ((keyIsPressed === true) && (keyCode === SHIFT))
+	{
+		grid.next_state();
+	}
+}
