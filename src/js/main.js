@@ -1,12 +1,13 @@
+let cell = new Cell(CANVAS_WIDTH / 2, CANVAS_HEIGHT / 2);
+
 function setup()
 {
 	createCanvas(CANVAS_WIDTH, CANVAS_HEIGHT);
-	background("#AACCFF");
+	background(BACKGROUND_COLOR);
+	cell.display();
 }
 
 function draw()
 {
-	fill(0);
-	noStroke();
-	rect(50, 50, 10, 10);
+	
 }
