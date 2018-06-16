@@ -1,4 +1,9 @@
-let			grid = new Grid();
+let			grid;
+
+function	preload()
+{
+	grid = new Grid();
+}
 
 function	setup()
 {
