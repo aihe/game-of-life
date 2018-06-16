@@ -11,8 +11,8 @@ class Cell
 	/**
 	 * Creates a cell instance if the given parameters are valid.
 	 * The "is_alive" boolean field is by default on true.
-	 * @param {number} x 
-	 * @param {number} y 
+	 * @param		{number} x 
+	 * @param 		{number} y 
 	 */
 	constructor(x, y)
 	{
