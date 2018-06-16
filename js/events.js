@@ -1,5 +1,5 @@
 function	mousePressed()
 {
-	console.log(mouseX + " " + mouseY);
+	grid.update(mouseX, mouseY);
 	return (false);
 }
