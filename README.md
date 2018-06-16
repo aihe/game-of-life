@@ -13,6 +13,18 @@ The evolution of a given cell for the next generation is based on the same rules
 ![](img/game-of-life-screen.png)
 #### [View live](https://aihe.github.io/game-of-life/)
 
+## Getting Started
+
+You just need to `git clone` the repo:
+
+	git clone https://github.com/aihe/game-of-life
+	cd game-of-life
+
+Then open "index.html" with your favorite browser.
+
+If you want to modify the game variables, modify the values present in the `/js/consts.js` file.
+	
+
 ## About
 
 Library : [p5js](https://p5js.org/) 
