@@ -113,8 +113,8 @@ class Grid
 
 		if ((typeof(mouse_x) === "number") && (typeof(mouse_y) === "number"))
 		{
-			x = Math.floor(mouse_x / 10);
-			y = Math.floor(mouse_y / 10);
+			x = Math.floor(mouse_x / CELL_LENGTH);
+			y = Math.floor(mouse_y / CELL_LENGTH);
 			if ((x >= 0 && x < GRID_WIDTH) && (y >= 0 && y < GRID_HEIGHT))
 			{
 				this.grid[y][x].is_alive = !(this.grid[y][x].is_alive);
