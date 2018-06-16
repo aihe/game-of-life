@@ -24,7 +24,7 @@ cd game-of-life
 
 Then open "index.html" with your favorite browser.
 
-If you want to modify the game variables, modify the values present in the `/js/consts.js` file.
+If you want to modify the game variables, update the values present in the `/js/consts.js` file.
 	
 
 ## About
