@@ -1,7 +1,7 @@
-const CANVAS_WIDTH = 800;
-const CANVAS_HEIGHT = 600;
+const	CANVAS_WIDTH = 800;
+const	CANVAS_HEIGHT = 600;
 
-const CELL_LENGTH = 10;
+const	CELL_LENGTH = 10;
 
-const BACKGROUND_COLOR = "#AACCFF";
-const CELLS_COLOR = 0;
+const	BACKGROUND_COLOR = "#AACCFF";
+const	CELLS_COLOR = 0;

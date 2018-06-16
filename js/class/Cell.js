@@ -9,7 +9,7 @@
 class Cell
 {
 	/**
-	 * Creates a cell instance if the given parameters are valid.
+	 * Creates a Cell instance if the given parameters are valid.
 	 * The "is_alive" boolean field is by default on false.
 	 * @param		{number} x 
 	 * @param 		{number} y 
