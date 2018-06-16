@@ -98,21 +98,6 @@ class Grid
 		if (changes > 0)
 		{
 			this.step++;
-			this.next_state();
-		}
-	}
-
-	/**
-	 * Displays the grid on the Canvas.
-	 */
-	display()
-	{
-		for (let j = 0; j < GRID_HEIGHT; j++)
-		{
-			for (let i = 0; i < GRID_WIDTH; i++)
-			{
-				this.grid[j][i].display();
-			}
 		}
 	}
 
@@ -133,7 +118,22 @@ class Grid
 			if ((x >= 0 && x < GRID_WIDTH) && (y >= 0 && y < GRID_HEIGHT))
 			{
 				this.grid[y][x].is_alive = !(this.grid[y][x].is_alive);
+				this.step = 0;
 			}
 		}
-	}	
+	}
+	
+	/**
+	 * Displays the grid on the Canvas.
+	 */
+	display()
+	{
+		for (let j = 0; j < GRID_HEIGHT; j++)
+		{
+			for (let i = 0; i < GRID_WIDTH; i++)
+			{
+				this.grid[j][i].display();
+			}
+		}
+	}
 }
