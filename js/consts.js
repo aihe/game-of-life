@@ -10,4 +10,5 @@ const	CELL_LENGTH			= 10;
 
 const	BACKGROUND_COLOR	= "#AACCFF";
 const	CELLS_COLOR 		= 0;
+
 const	TXT_STEP_COLOR		= "#D72323";
