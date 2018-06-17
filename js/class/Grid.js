@@ -87,7 +87,6 @@ class Grid
 	{
 		let			ret;
 		let			change_list;
-		let			new_elt;
 
 		change_list = [];
 		for (let j = 0; j < GRID_HEIGHT; j++)
@@ -97,11 +96,7 @@ class Grid
 				ret = this.grid[j][i].next_state(this.get_neighbors(i, j));
 				if (ret >= 0)
 				{
-					new_elt = new Array(3);
-					new_elt[0] = i;
-					new_elt[1] = j;
-					new_elt[2] = ret == 1;
-					change_list.push(new_elt);
+					change_list.push([i, j, ret == 1]);
 				}
 			}
 		}
