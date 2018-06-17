@@ -85,19 +85,32 @@ class Grid
 	 */
 	next_state()
 	{
-		let			changes;
+		let			ret;
+		let			change_list;
+		let			new_elt;
 
-		changes = 0;
+		change_list = [];
 		for (let j = 0; j < GRID_HEIGHT; j++)
 		{
 			for (let i = 0; i < GRID_WIDTH; i++)
 			{
-				changes += this.grid[j][i].next_state(this.get_neighbors(i, j));
+				ret = this.grid[j][i].next_state(this.get_neighbors(i, j));
+				if (ret >= 0)
+				{
+					new_elt = new Array(3);
+					new_elt[0] = i;
+					new_elt[1] = j;
+					new_elt[2] = ret == 1;
+					change_list.push(new_elt);
+				}
 			}
 		}
-		if (changes > 0)
+		if (change_list.length > 0)
 		{
 			this.step++;
+			change_list.forEach((elt) => {
+				this.grid[elt[1]][elt[0]].is_alive = elt[2];
+			});
 		}
 	}
 

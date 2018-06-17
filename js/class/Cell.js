@@ -55,28 +55,26 @@ class Cell
 	}
 
 	/**
-	 * Makes the cell evolve according to its number of neighbours.
+	 * Determines the new state of the cell.
 	 * @param		{number} neighbors 
+	 * @returns		-1 if there is no change,
+	 * 				0 if the cell dies,
+	 * 				1 if the cell is born.
 	 */
 	next_state(neighbors)
 	{
-		let			changes;
-
-		changes = 0;
 		if (typeof(neighbors) === "number")
 		{
 			if ((neighbors === 3) && !(this.is_alive))
 			{
-				changes++;
-				this.is_alive = true;
+				return (1);
 			}
 			else if (((neighbors < 2) || (neighbors > 3)) && (this.is_alive))
 			{
-				changes++;
-				this.is_alive = false;
+				return (0);
 			}
 		}
-		return (changes);
+		return (-1);
 	}
 
 	set x(x)
