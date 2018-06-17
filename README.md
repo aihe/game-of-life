@@ -32,7 +32,9 @@ If you want to modify the game variables, update the values present in the `/js/
 * Add a menu to change settings,
 * Add a button to clear the window.
 
-> One day.
+> "one day"
+
+*( ͡° ͜ʖ ͡°)*
 
 ## About
 
