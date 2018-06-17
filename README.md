@@ -26,12 +26,6 @@ Then open "index.html" with your favorite browser.
 
 If you want to modify the game variables, update the values present in the `/js/consts.js` file.
 	
-
-## About
-
-Library : [p5js](https://p5js.org/) 
-
-
 ## Todo one day
 
 * Add pre-made starting situations,
@@ -39,3 +33,7 @@ Library : [p5js](https://p5js.org/)
 * Add a button to clear the window.
 
 > One day.
+
+## About
+
+Library : [p5js](https://p5js.org/) 
