@@ -18,7 +18,7 @@ The evolution of a given cell for the next generation is based on the same rules
 You just need to `git clone` the repo:
 
 ```bash
-git clone https://github.com/aihe/game-of-life
+git clone git@github.com:aihe/game-of-life.git
 cd game-of-life
 ```
 
