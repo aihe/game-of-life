@@ -1,5 +1,3 @@
-let			grid;
-
 function	preload()
 {
 	grid = new Grid();
@@ -8,12 +6,10 @@ function	preload()
 function	setup()
 {
 	createCanvas(CANVAS_WIDTH, CANVAS_HEIGHT);
+	grid.display();
 }
 
 function	draw()
 {
-	background(BACKGROUND_COLOR);
-	grid.display();
-	print_game_step();
-	keyTouched();
+	keyPressedALot();
 }

@@ -8,4 +8,9 @@ const	GRID_HEIGHT			= CANVAS_HEIGHT / CELL_LENGTH;
 
 const	BACKGROUND_COLOR	= "#AACCFF";
 const	CELLS_COLOR 		= 0;
-const	TXT_STEP_COLOR		= "#222233";
+const	TXT_CELLS_GEN		= "#e567b5";
+
+/** Array used to find the number of neighbours of a cell. See class/Grid.js */
+const	DELTAS				= [ {x: -1, y: -1}, {x: 0, y: -1}, {x: 1, y: -1},
+								{x: -1, y: 0},                 {x: 1, y: 0},
+								{x: -1, y: 1},  {x: 0, y: 1},  {x: 1, y: 1} ];

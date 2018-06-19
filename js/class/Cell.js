@@ -46,12 +46,9 @@ class Cell
 	 */
 	display()
 	{
-		if (this.is_alive)
-		{
-			fill(CELLS_COLOR);
-			noStroke();
-			rect(this.x, this.y, CELL_LENGTH, CELL_LENGTH);
-		}
+		fill(this.is_alive ? CELLS_COLOR : BACKGROUND_COLOR);
+		noStroke();
+		rect(this.x, this.y, CELL_LENGTH, CELL_LENGTH);
 	}
 
 	/**

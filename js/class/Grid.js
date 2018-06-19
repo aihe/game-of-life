@@ -14,8 +14,13 @@ class Grid
 	 */
 	constructor()
 	{
+		/** Grid containing all Cell's instances. */
 		this.grid = new Array(GRID_HEIGHT);
+
+		/** Current cell generation. */
 		this.step = 0;
+	
+		/* Instanciation of cell objects. */
 		for (let j = 0; j < GRID_HEIGHT; j++)
 		{
 			this.grid[j] = new Array(GRID_WIDTH);
@@ -27,61 +32,29 @@ class Grid
 	}
 
 	/**
-	 * Returns the cell's (x;y) neighbors.
+	 * Returns the cell's (x;y) neighbours.
 	 * @param		{number} x 
 	 * @param		{number} y
-	 * @returns		{number} neighbors
+	 * @returns		{number} neighbours
 	 */
-	get_neighbors(x, y)
+	get_neighbours(x, y)
 	{
-		let			neighbors;
+		let			neighbours;
 
-		neighbors = 0;
-		if (x > 0)
-		{
-			if (y > 0)
+		neighbours = 0;
+		DELTAS.forEach((cell) => {
+			if (((x + cell.x) >= 0) && ((x + cell.x) < GRID_WIDTH)
+				&& ((y + cell.y) >= 0) && ((y + cell.y) < GRID_HEIGHT)
+				&& this.grid[y + cell.y][x + cell.x].is_alive)
 			{
-				neighbors = this.grid[y - 1][x - 1].is_alive ? neighbors + 1
-					: neighbors;
+				neighbours++;
 			}
-			neighbors = this.grid[y][x - 1].is_alive ? neighbors + 1
-				: neighbors;
-			if (y < GRID_HEIGHT - 1)
-			{
-				neighbors = this.grid[y + 1][x - 1].is_alive ? neighbors + 1
-					: neighbors;
-			}
-		}
-		if (x < GRID_WIDTH - 1)
-		{
-			if (y > 0)
-			{
-				neighbors = this.grid[y - 1][x + 1].is_alive ? neighbors + 1
-					: neighbors;
-			}
-			neighbors = this.grid[y][x + 1].is_alive ? neighbors + 1
-				: neighbors;
-			if (y < GRID_HEIGHT - 1)
-			{
-				neighbors = this.grid[y + 1][x + 1].is_alive ? neighbors + 1
-					: neighbors;
-			}
-		}
-		if (y > 0)
-		{
-			neighbors = this.grid[y - 1][x].is_alive ? neighbors + 1
-				: neighbors;
-		}
-		if (y < GRID_HEIGHT - 1)
-		{
-			neighbors = this.grid[y + 1][x].is_alive ? neighbors + 1
-			: neighbors;
-		}
-		return (neighbors);
+		});
+		return (neighbours);
 	}
 
 	/**
-	 * Determines the next cell generation from the number of neighbors.
+	 * Determines the next cell generation from the number of neighbours.
 	 */
 	next_state()
 	{
@@ -93,7 +66,7 @@ class Grid
 		{
 			for (let i = 0; i < GRID_WIDTH; i++)
 			{
-				ret = this.grid[j][i].next_state(this.get_neighbors(i, j));
+				ret = this.grid[j][i].next_state(this.get_neighbours(i, j));
 				if (ret >= 0)
 				{
 					change_list.push([i, j, ret == 1]);
@@ -126,7 +99,7 @@ class Grid
 			if ((x >= 0 && x < GRID_WIDTH) && (y >= 0 && y < GRID_HEIGHT))
 			{
 				this.grid[y][x].is_alive = !(this.grid[y][x].is_alive);
-				this.step = 0;
+				this.grid[y][x].display();
 			}
 		}
 	}

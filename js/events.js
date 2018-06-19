@@ -8,15 +8,15 @@ function	keyReleased()
 {
 	if (keyCode === ENTER)
 	{
-		grid.next_state();
+		update_game();
 	}
-	return (false);
+	return (true);
 }
 
-function	keyTouched()
+function	keyPressedALot()
 {
 	if ((keyIsPressed === true) && (keyCode === SHIFT))
 	{
-		grid.next_state();
+		update_game();
 	}
 }
