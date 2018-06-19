@@ -103,6 +103,21 @@ class Grid
 			}
 		}
 	}
+
+	/**
+	 * Kills all the cells.
+	 */
+	kill()
+	{
+		for (let j = 0; j < GRID_HEIGHT; j++)
+		{
+			for (let i = 0; i < GRID_WIDTH; i++)
+			{
+				this.grid[j][i].is_alive = false;
+			}
+		}
+		this.step = 0;
+	}
 	
 	/**
 	 * Displays the grid on the Canvas.

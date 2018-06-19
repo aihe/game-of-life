@@ -30,7 +30,6 @@ If you want to modify the game variables, update the values present in the `/js/
 
 * Add pre-made starting situations,
 * Add a menu to change settings,
-* Add a button to clear the window.
 
 > "one day"
 

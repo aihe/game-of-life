@@ -10,7 +10,12 @@ function	keyReleased()
 	{
 		update_game();
 	}
-	return (true);
+	else if (keyCode === KEY_C)
+	{
+		grid.kill();
+		update_game();
+	}
+	return (false);
 }
 
 function	keyPressedALot()
