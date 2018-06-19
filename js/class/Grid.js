@@ -43,9 +43,9 @@ class Grid
 
 		neighbours = 0;
 		DELTAS.forEach((cell) => {
-			if (((x + cell.x) >= 0) && ((x + cell.x) < GRID_WIDTH)
-				&& ((y + cell.y) >= 0) && ((y + cell.y) < GRID_HEIGHT)
-				&& this.grid[y + cell.y][x + cell.x].is_alive)
+			if (((x + cell[0]) >= 0) && ((x + cell[0]) < GRID_WIDTH)
+				&& ((y + cell[1]) >= 0) && ((y + cell[1]) < GRID_HEIGHT)
+				&& this.grid[y + cell[1]][x + cell[0]].is_alive)
 			{
 				neighbours++;
 			}

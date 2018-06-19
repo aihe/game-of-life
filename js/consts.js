@@ -13,6 +13,6 @@ const	TXT_CELLS_GEN		= "#e567b5";
 const	KEY_C				= 67;
 
 /** Array used to find the number of neighbours of a cell. See class/Grid.js */
-const	DELTAS				= [ {x: -1, y: -1}, {x: 0, y: -1}, {x: 1, y: -1},
-								{x: -1, y: 0},                 {x: 1, y: 0},
-								{x: -1, y: 1},  {x: 0, y: 1},  {x: 1, y: 1} ];
+const	DELTAS				= [ [-1, -1], [0, -1], [1, -1],
+								[-1, 0],           [1, 0],
+								[-1, 1],  [0, 1],  [1, 1] ];
