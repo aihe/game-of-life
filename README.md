@@ -11,7 +11,7 @@ The evolution of a given cell for the next generation is based on the same rules
 * Any dead cell with *exactly three* live neighbors becomes a **live** cell, as if by reproduction. 
 
 ![](img/gameoflife.gif)
-#### [View live](https://aihe.github.io/game-of-life/)
+#### [View live](https://akhercha.github.io/game-of-life/)
 
 ## Getting Started
 
